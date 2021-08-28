@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  position: relative;
+  background-color: #f8edeb;
+}
+#ball {
+  font-size: 5rem;
+  color: #fc9f2c;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-70%, -50%);
+  animation: basketBall 1.5s ease 1.3s 1 forwards;
+  opacity: 0;
+}
+.box {
+  font-size: 6rem;
+  color: #c19a6c;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-65%, -50%);
+}
+#box-open {
+  opacity: 0;
+  animation: boxOpen 2s ease 0.5s 1 forwards;
+}
+#box-closed {
+  opacity: 1;
+  animation: boxClosed 2s ease 0s 1 forwards;
+}
+
+@keyframes basketBall {
+  0% {
+    opacity: 0;
+    top: 65%;
+    left: 50%;
+    transform: translate(-65%, -50%);
+  }
+  100% {
+    opacity: 1;
+    top: 25%;
+    left: 50%;
+    transform: translate(-70%, -25%);
+  }
+}
+
+@keyframes boxOpen {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes boxClosed {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
